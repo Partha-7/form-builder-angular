@@ -1,0 +1,5 @@
+<storybook-header [preview]="isPreview" (onChangePreview)="handlePreview($event)"></storybook-header>
+<div [ngClass]="!isPreview ? 'layout-sidebar' : 'preview-layout'">
+    <app-sidebar *ngIf="!isPreview"></app-sidebar>
+    <app-element-list [preview]="isPreview" (onClosePreview)="onClickBack()"></app-element-list>
+</div>

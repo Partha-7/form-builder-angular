@@ -1,0 +1,2762 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "User",
+            "id": "interface-User-a9bedc36aec23737500790cddfe25d05ca2de8b2ef3f1259a3531de5267fe14112c887b392bb35e34bb0576eb7b83167c6fa9aea698001c45ccc6cd4be8a589d",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {\nname: any;\n}\n",
+            "properties": [
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 171,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-687d06b42fa4fc1e5a96d2494f3dd56ef12c6695ab9ea91bd584954d08895c181683e0140dce9bf865a8b09671e70a1f61be74926baf829cbf1410bd0895d96d",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'form-builder'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RouterOutlet"
+                },
+                {
+                    "name": "DashboardComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { RouterOutlet } from '@angular/router';\nimport { DashboardComponent } from './dashboard/dashboard.component';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [CommonModule, RouterOutlet,DashboardComponent],\n  templateUrl: './app.component.html',\n  styleUrl: './app.component.css'\n})\nexport class AppComponent {\n  title = 'form-builder';\n}\n",
+            "styleUrl": "./app.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<app-dashboard></app-dashboard>"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-2456e36fbee4ef0dbf2118952693d402307ee8d3e2b0cb126874a623dd84a0ee5c8c350189f43bbb8b8d79743d4efcf07634d64fa3521775f8ba1faeaf3cbad4",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "ButtonComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": " <button\n mat-raised-button\n (click)=\"onClick.emit($event)\"\n  [ngClass]=\"class\"\n  [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  [disabled]=\"disabled\"\n > {{ label }}</button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 32,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 990,
+                            "end": 1003,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 991,
+                                "end": 999,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 46,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 25,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 38,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 52,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\nimport {MatButtonModule} from '@angular/material/button';\n\n@Component({\n  selector: 'storybook-button',\n  imports: [CommonModule,MatButtonModule],\n  standalone: true,\n  template: ` \n  <button\n   mat-raised-button\n   (click)=\"onClick.emit($event)\"\n    [ngClass]=\"class\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n    [disabled]=\"disabled\"\n   > {{ label }}</button>`,\n  exportAs: 'ButtonComponent',\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n  @Input() class:any;\n  @Input() disabled:boolean=false;\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label:any = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-1e37cee0b18368852c3e427b8939775f69736c40cfa05fb370ecdb4d1666f5520f98f4acf1ef51e2aa0ab92b16dd0f530d6f9899c8bd22c5a0f680c7dc90e7ce",
+            "file": "src/stories/checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "CheckboxComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-checkbox",
+            "styleUrls": [
+                "./checkbox.css"
+            ],
+            "styles": [],
+            "template": "<mat-checkbox [class]='class' [checked]=\"checked\" [disabled]=\"disabled\">{{label}}</mat-checkbox>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "checked",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'checkbox'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatCheckboxModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport {MatCheckboxModule} from '@angular/material/checkbox';\r\n\r\n@Component({\r\n  selector: 'storybook-checkbox',\r\n  imports: [CommonModule,MatCheckboxModule],\r\n  standalone:true,\r\n  template:` <mat-checkbox [class]='class' [checked]=\"checked\" [disabled]=\"disabled\">{{label}}</mat-checkbox>`,\r\n  exportAs:'CheckboxComponent',\r\n  styleUrls: ['./checkbox.css'],\r\n})\r\nexport default class CheckboxComponent {\r\n\r\n@Input() label:string='checkbox';\r\n@Input() class:any;\r\n@Input() checked:boolean=false;\r\n@Input() disabled:boolean=true;\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n \r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./checkbox.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "DashboardComponent",
+            "id": "component-DashboardComponent-ab02b102cac6424918d80b61200168850b97f09361974377a051b34a7a317102b6992e00333716650c509701ba7693a61ed48546ca4477cf420d449a02ee809c",
+            "file": "src/app/dashboard/dashboard.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dashboard",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./dashboard.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "isActive",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "isHover",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'TEST'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "ElementListComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "SidebarComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport HeaderComponent from \"../../stories/header.component\";\nimport ButtonComponent from '../../stories/button.component';\nimport { ElementListComponent } from '../element-list/element-list.component';\nimport { SidebarComponent } from '../sidebar/sidebar.component';\n\n@Component({\n    selector: 'app-dashboard',\n    standalone: true,\n    templateUrl: './dashboard.component.html',\n    styleUrl: './dashboard.component.css',\n    imports: [HeaderComponent,ButtonComponent,ElementListComponent,SidebarComponent]\n})\nexport class DashboardComponent {\n  @Input() label = 'TEST';\n  @Input() isHover = true;\n  @Input() isActive = false;\n}\n",
+            "styleUrl": "./dashboard.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<storybook-header></storybook-header>\n<div class=\"layout-sidebar\">\n    <app-sidebar></app-sidebar>\n    <app-element-list></app-element-list>\n</div>"
+        },
+        {
+            "name": "DateComponent",
+            "id": "component-DateComponent-23fc4628052cae9c5ee1d78db2a3101a78c7a926e497e1f8551d5b0fbab4d8d94f25bab9340234033e9683ca0cde87eb932748044d9fd57d653bcd412d744055",
+            "file": "src/stories/date.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "DateComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-date",
+            "styleUrls": [
+                "./date.css"
+            ],
+            "styles": [],
+            "template": "<mat-form-field [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">  <mat-label>{{label}}</mat-label>\n  <input matInput [matDatepicker]=\"picker\">\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\" [disabled]='disabled'></mat-datepicker-toggle>\n  <mat-datepicker #picker></mat-datepicker>\n</mat-form-field>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "bgColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "boolean | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "defaultValue": "'75px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Choose date'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'100px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSelectModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatDatepickerModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport {MatDatepickerModule} from '@angular/material/datepicker';\r\n\r\n@Component({\r\n  selector: 'storybook-date',\r\n  imports: [CommonModule, MatSelectModule,MatDatepickerModule],\r\n  standalone: true,\r\n  template: `<mat-form-field [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <input matInput [matDatepicker]=\"picker\">\r\n  <mat-datepicker-toggle matIconSuffix [for]=\"picker\" [disabled]='disabled'></mat-datepicker-toggle>\r\n  <mat-datepicker #picker></mat-datepicker>\r\n</mat-form-field>`,\r\n  exportAs: 'DateComponent',\r\n  styleUrls: ['./date.css'],\r\n})\r\nexport default class DateComponent {\r\n  @Input() class?: string;\r\n  @Input() width?: string = '100px';\r\n  @Input() height?: string = '75px';\r\n  @Input() bgColor?: string;\r\n  @Input() disabled?: boolean | undefined = true;\r\n  @Input() label: string = 'Choose date';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./date.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "DropdownComponent",
+            "id": "component-DropdownComponent-691dfc02ac7253c3bdb5f38b66fc8b24e81c614f1a5649abca2201e79cf15fe76935f1c3dab0947d6053c05cac6a1c106012d02613b2704945c99f9d3eda1eef",
+            "file": "src/stories/dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "DropdownComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-dropdown",
+            "styleUrls": [
+                "./dropdown.css"
+            ],
+            "styles": [],
+            "template": "<mat-form-field [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">  <mat-label>{{label}}</mat-label>\n  <mat-select [class]='class' [disabled]='disabled' [value]=\"value\">\n    @for (element of data; track element) {\n      <mat-option>{{element}}</mat-option>\n    }\n  </mat-select>\n</mat-form-field>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "bgColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "data",
+                    "defaultValue": "['test1', 'test2', 'test3', 'test4']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "{}",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "boolean | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "defaultValue": "'75px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Select'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 30,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'100px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatSelectModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { MatSelectModule } from '@angular/material/select';\r\n\r\n@Component({\r\n  selector: 'storybook-dropdown',\r\n  imports: [CommonModule, MatSelectModule],\r\n  standalone: true,\r\n  template: `<mat-form-field [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <mat-select [class]='class' [disabled]='disabled' [value]=\"value\">\r\n    @for (element of data; track element) {\r\n      <mat-option>{{element}}</mat-option>\r\n    }\r\n  </mat-select>\r\n</mat-form-field>`,\r\n  exportAs: 'DropdownComponent',\r\n  styleUrls: ['./dropdown.css'],\r\n})\r\nexport default class DropdownComponent {\r\n  @Input()\r\n  primary = false;\r\n  @Input() class?: string;\r\n  @Input() width?: string = '100px';\r\n  @Input() height?: string = '75px';\r\n  @Input() bgColor?: string;\r\n  @Input() disabled?: boolean | undefined = true;\r\n  @Input() label: string = 'Select';\r\n  @Input() value: any;\r\n  @Input() name = '';\r\n  @Input() id = '';\r\n  @Input() data = ['test1', 'test2', 'test3', 'test4'];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".dropdown-element{\r\n    border: 1px solid black;\r\n    width: 100px !important;\r\n    height: 30px !important;\r\n    border-radius: 4px;\r\n}",
+                    "styleUrl": "./dropdown.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "ElementListComponent",
+            "id": "component-ElementListComponent-21fe0f830043ca855dc9ebb67a51beca7ce8d3d67a122fe51f8a2000cb990dfc3ed910eb5088abdd2572bb2fb98360caa6a128c458ef1e1206038f77d4e68364",
+            "file": "src/app/element-list/element-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-element-list",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./element-list.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "buttonLabel",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "checkboxLabel",
+                    "defaultValue": "'checkbox'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 41,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "inputLabel",
+                    "defaultValue": "'Text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "itemWidth",
+                    "defaultValue": "'300px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 44,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "optionsList",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 46,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "props",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 43,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "radioLabel",
+                    "defaultValue": "'radio'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 42,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "contentBlock",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                },
+                {
+                    "name": "elements",
+                    "defaultValue": "[\n    { name: 'Button', type: 'button', inputType: 'button', component: ButtonComponent },\n    { name: 'text', type: 'input-text', inputType: 'text', component: InputComponent },\n    { name: 'checkbox', type: 'input-check', inputType: 'checkbox', displayText: 'Check box', component: CheckboxComponent },\n    { name: 'dropdown', type: 'dropdown', inputType: 'select', component: DropdownComponent },\n    { name: 'radio', type: 'radio', inputType: 'radioButton', component: RadioComponent },\n    { name: 'date', type: 'date', inputType: 'datePicker', component: DateComponent }\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 56
+                },
+                {
+                    "name": "isChecked",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 48
+                },
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 47
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 66
+                },
+                {
+                    "name": "values",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[] | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 67
+                },
+                {
+                    "name": "visible",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 65
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changeWidth",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 100,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "drop",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "CdkDragDrop<string[]> | any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 72,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "CdkDragDrop<string[]> | any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "noReturnPredicate",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 83,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onAddOptions",
+                    "args": [
+                        {
+                            "name": "ev",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "{}",
+                    "typeParameters": [],
+                    "line": 104,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "ev",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onChangeDisable",
+                    "args": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 108,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "e",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onClear",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 90,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSlideCheckedChange",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 53,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "onSlideToggleChange",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "boolean",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "predicate",
+                    "args": [
+                        {
+                            "name": "item",
+                            "type": "CdkDrag<string[]> | any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 80,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "item",
+                            "type": "CdkDrag<string[]> | any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "removeItem",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 86,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "saveLabel",
+                    "args": [
+                        {
+                            "name": "newValue",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 94,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "newValue",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "showDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 69,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CheckboxComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "InputComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "CdkDrag"
+                },
+                {
+                    "name": "CdkDropList"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                },
+                {
+                    "name": "TooltipModule",
+                    "type": "module"
+                },
+                {
+                    "name": "DialogModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatButtonToggleModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ChipsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "RadioComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "DropdownComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "MatSlideToggleModule",
+                    "type": "module"
+                },
+                {
+                    "name": "DateComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport ButtonComponent from '../../stories/button.component';\nimport { CommonModule } from '@angular/common';\nimport CheckboxComponent from '../../stories/checkbox.component';\nimport InputComponent from '../../stories/input.component';\nimport { CdkDragDrop, CdkDrag, CdkDropList, copyArrayItem, moveItemInArray } from '@angular/cdk/drag-drop';\nimport DropdownComponent from '../../stories/dropdown.component';\nimport RadioComponent from '../../stories/radio.component';\nimport { MatIconModule } from '@angular/material/icon';\nimport { TooltipModule } from 'primeng/tooltip';\nimport { DialogModule } from 'primeng/dialog';\nimport { MatButtonToggleModule } from '@angular/material/button-toggle';\nimport { ChipsModule } from 'primeng/chips';\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\nimport DateComponent from '../../stories/date.component';\n\n@Component({\n  selector: 'app-element-list',\n  standalone: true,\n  imports: [ButtonComponent,\n    CheckboxComponent,\n    InputComponent,\n    CommonModule,\n    CdkDrag,\n    CdkDropList,\n    MatIconModule,\n    TooltipModule,\n    DialogModule,\n    MatButtonToggleModule,\n    ChipsModule,\n    RadioComponent,\n    DropdownComponent,\n    MatSlideToggleModule,\n    DateComponent],\n  templateUrl: './element-list.component.html',\n  styleUrl: './element-list.component.css'\n})\nexport class ElementListComponent {\n  @Input() inputLabel: any = 'Text';\n  @Input() buttonLabel: any = 'Button';\n  @Input() checkboxLabel: any = 'checkbox';\n  @Input() radioLabel: any = 'radio';\n  @Input() props: any;\n  @Input() itemWidth: string = '300px';\n  @Input()\n  optionsList: string[] = [];\n  isDisabled = false;\n  isChecked = true;\n\n  onSlideToggleChange(event: boolean): void {\n    this.isDisabled = event;\n  }\n  onSlideCheckedChange(event: boolean): void {\n    this.isChecked = event;\n  }\n  elements = [\n    { name: 'Button', type: 'button', inputType: 'button', component: ButtonComponent },\n    { name: 'text', type: 'input-text', inputType: 'text', component: InputComponent },\n    { name: 'checkbox', type: 'input-check', inputType: 'checkbox', displayText: 'Check box', component: CheckboxComponent },\n    { name: 'dropdown', type: 'dropdown', inputType: 'select', component: DropdownComponent },\n    { name: 'radio', type: 'radio', inputType: 'radioButton', component: RadioComponent },\n    { name: 'date', type: 'date', inputType: 'datePicker', component: DateComponent }\n  ];\n  contentBlock: any = [];\n  visible: boolean = false;\n  value: string | undefined;\n  values: string[] | undefined;\n\n  showDialog() {\n    this.visible = true;\n  }\n  drop(event: CdkDragDrop<string[]> | any) {\n    if (event.previousContainer !== event.container) {\n      copyArrayItem(event.previousContainer.data,\n        event.container.data,\n        event.previousIndex,\n        event.currentIndex);\n    }\n  }\n  predicate(item: CdkDrag<string[]> | any) {\n    return item.data;\n  }\n  noReturnPredicate() {\n    return false;\n  }\n  removeItem() {\n    this.contentBlock.pop();\n    return this.contentBlock;\n  }\n  onClear() {\n    this.contentBlock.length = 0;\n    return this.contentBlock;\n  }\n  saveLabel(newValue: any) {\n    this.inputLabel = newValue.target.value;\n    this.buttonLabel = newValue.target.value;\n    this.checkboxLabel = newValue.target.value;\n    this.radioLabel = newValue.target.value;\n  }\n  changeWidth(ev: any) {\n    this.itemWidth = ev.target.value + \"px\";\n  }\n\n  onAddOptions(ev: any) {\n    this.optionsList.push(ev.value);\n    return this.optionsList;\n  }\n  onChangeDisable(e: any) {\n    console.log(e);\n\n  }\n}\n",
+            "styleUrl": "./element-list.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div style=\"display: flex;flex-direction: row; justify-content: space-between;\">\n    <div class=\"example-container\">\n        <h1 class=\"text-xl\">Form Layout</h1>\n        <div *ngIf=\"contentBlock.length > 0\" class=\"flex flex-row justify-end gap-2\">\n            <storybook-button (onClick)=\"onClear()\" label=\"CLEAR\"></storybook-button>\n            <storybook-button (onClick)=\"removeItem()\" label=\"UNDO\"></storybook-button>\n        </div>\n        <div id=\"contentBlock\" cdkDropList [cdkDropListData]=\"contentBlock\" cdkDropListConnectedTo=\"elements\"\n            class=\"example-list\" (cdkDropListDropped)=\"drop($event)\" [cdkDropListEnterPredicate]=\"predicate\">\n            @for (item of contentBlock; track item) {\n            <p-dialog [(visible)]=\"visible\"\n                [style]=\"{width: '50vw',height:'40vw',border:'1px solid black',backgroundColor:'lightGray',borderRadius:'4px',textAlign:'start'}\">\n                <p class=\"text-xl\">Properties</p>\n                <br />\n                <span class=\"p-float-label flex flex-col ml-5\">\n                    <label htmlFor=\"label\">Label</label>\n                    <input class=\"w-2/4 rounded-md h-9\" pInputText id=\"username\" (change)='saveLabel($event)' />\n                </span>\n                <br />\n                <span *ngIf=\"item.name==='text'||'dropdown'\" class=\"p-float-label flex flex-col ml-5\">\n                    <label htmlFor=\"width\">Width</label>\n                    <input class=\"w-2/4 rounded-md h-9\" pInputText id=\"username\" (change)='changeWidth($event)' />\n                </span>\n                <br />\n                <span *ngIf=\"item.name==='text'||'dropdown'\" class=\"p-float-label flex flex-col ml-5\">\n                    <label htmlFor=\"placeholder\">placeholder</label>\n                    <input class=\"w-2/4 rounded-md h-9\" pInputText id=\"username\" (ngModel)=\"value\" />\n                </span>\n                <br />\n                <span *ngIf=\"item.name==='text'\" class=\"p-float-label flex flex-col ml-5\">\n                    <label htmlFor=\"maxLength\">Max length</label>\n                    <input class=\"w-2/4 rounded-md h-9\" pInputText id=\"username\" (ngModel)=\"value\" />\n                </span>\n                <br />\n                <span class=\"p-float-label flex flex-row gap-2 ml-5\">\n                    <label htmlFor=\"maxLength\">Disabled</label>\n                    <mat-slide-toggle (change)=\"onSlideToggleChange($event.checked)\"></mat-slide-toggle>\n                </span>\n                <br />\n                <span *ngIf=\"item.name==='checkbox'\" class=\"p-float-label flex flex-row gap-2 ml-5\">\n                    <label htmlFor=\"checked\">Checked</label>\n                    <mat-slide-toggle (change)=\"onSlideCheckedChange($event.checked)\"></mat-slide-toggle>\n                </span>\n                <br />\n                <span *ngIf=\"item.name==='dropdown'\" class=\"p-float-label flex flex-col ml-5\">\n                    <label htmlFor=\"options\">Options</label>\n                    <div class=\"card p-fluid w-2/4 rounded-md bg-white\">\n                        <p-chips class=\"bg-slate-400\" (ngModel)=\"values\" (onAdd)=\"onAddOptions($event)\"></p-chips>\n                    </div>\n                </span>\n            </p-dialog>\n            <div (dblclick)=\"showDialog()\" class=\"grid grid-rows h-20\">\n                <div class=\"grid-cols\" cdkDrag [cdkDragData]=\"item\">\n                    <storybook-input *ngIf=\"item.name==='text'\" [width]=\"itemWidth\" [label]=\"inputLabel\"\n                        [disabled]=\"isDisabled\"></storybook-input>\n                    <storybook-button *ngIf=\"item.name==='Button'\" [label]=\"buttonLabel\"\n                        [disabled]=\"isDisabled\"></storybook-button>\n                    <storybook-checkbox *ngIf=\"item.name==='checkbox'\" [label]=\"checkboxLabel\" [checked]=\"isChecked\"\n                        [disabled]=\"isDisabled\"></storybook-checkbox>\n                    <storybook-dropdown *ngIf=\"item.name==='dropdown'\" [width]=\"itemWidth\" [data]=\"optionsList\"\n                        [disabled]=\"optionsList.length > 0 && !isDisabled ? false : true\"></storybook-dropdown>\n                    <storybook-radio *ngIf=\"item.name==='radio'\" [label]=\"radioLabel\" [disabled]=\"isDisabled\"></storybook-radio>\n                    <storybook-date *ngIf=\"item.name==='date'\" label=\"choose date\" [disabled]=\"isDisabled\"></storybook-date>\n                </div>\n            </div>\n            }\n        </div>\n    </div>\n    <div class=\"example-container\">\n        <h1 class=\"text-lg\">Elements</h1>\n        <div id=\"elements\" cdkDropList [cdkDropListData]=\"elements\" cdkDropListConnectedTo=\"contentBlock\"\n            class=\"fetch-list\" (cdkDropListDropped)=\"drop($event)\" [cdkDropListEnterPredicate]=\"predicate\">\n            @for (element of elements; track element) {\n            <div class=\"pt-2 border-black h-16 border-bottom hover:bg-slate-300 cursor-move \" cdkDrag\n                [cdkDragData]=\"element\"><span class=\"cursor-move\" [ngComponentOutlet]=\"element.component\"></span></div>\n            }\n        </div>\n    </div>\n\n</div>"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-c34337ee771cb72cda1a4b2fa784b743dbc413ef39f677a9305bfaf5b0d265a03e4f240fd6946d087a9c682fb90339a6d50256d7b0bd9c2eca5fdbd106e5ee28",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"storybook-header\">\n      <div>\n        <h1 class=\"py-px\">Form-Builder</h1>\n      </div>\n      <div class=\"card flex justify-content-center\">\n    <p-button class=\"bg-cyan-600 text-white h-8 rounded-md w-32 pl-3 pb-2 hover:bg-cyan-400\" label=\"Preview\"><mat-icon class=\"pt-1\">play_arrow</mat-icon></p-button>\n</div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 35,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatIconModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport type { User } from './User';\nimport ButtonComponent from './button.component';\nimport { CommonModule } from '@angular/common';\nimport { ButtonModule } from 'primeng/button';\nimport {MatIconModule} from '@angular/material/icon';\n\n@Component({\n  selector: 'storybook-header',\n  standalone: true,\n  imports: [ButtonComponent, CommonModule, ButtonModule,MatIconModule],\n  template: `<header>\n    <div class=\"storybook-header\">\n      <div>\n        <h1 class=\"py-px\">Form-Builder</h1>\n      </div>\n      <div class=\"card flex justify-content-center\">\n    <p-button class=\"bg-cyan-600 text-white h-8 rounded-md w-32 pl-3 pb-2 hover:bg-cyan-400\" label=\"Preview\"><mat-icon class=\"pt-1\">play_arrow</mat-icon></p-button>\n</div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-header {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background-color: rgba(40, 35, 35, 0.941) !important;\n}\n\n.storybook-header svg {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header h1 {\n  font-weight: 700;\n  font-size: 20px;\n  line-height: 1;\n  color: white;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-header button + button {\n  margin-left: 10px;\n}\n\n.storybook-header .welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-2c0c352b2e9571ffd03ade78a41baaff2f6767a408ca71cd4e1a29ccc3f3f1cf701481d25c002910bab9bdc94ac2af812ee2c1c829fae9d5c8ce8ddd12fdbf52",
+            "file": "src/stories/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "InputComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-input",
+            "styleUrls": [
+                "./input.css"
+            ],
+            "styles": [],
+            "template": "<mat-form-field  [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">  <mat-label>{{label}}</mat-label>\n  <input  matInput [class]='class' [value]='value' [placeholder]='placeHolder' [disabled]='disabled'>\n</mat-form-field>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "bgColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 26,
+                    "type": "boolean | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "defaultValue": "'75px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "string | undefined",
+                    "decorators": []
+                },
+                {
+                    "name": "placeHolder",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 31,
+                    "type": "any",
+                    "decorators": [
+                        {
+                            "name": "Output",
+                            "stringifiedArguments": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 21,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "any",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'100px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 32
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatInputModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { MatInputModule } from '@angular/material/input';\r\n\r\n@Component({\r\n  selector: 'storybook-input',\r\n  imports: [CommonModule, MatInputModule],\r\n  standalone: true,\r\n  template: `<mat-form-field  [ngStyle]=\"{ 'width': width, 'height': height,'backgroundColor':bgColor }\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <input  matInput [class]='class' [value]='value' [placeholder]='placeHolder' [disabled]='disabled'>\r\n</mat-form-field>`,\r\n  exportAs: 'InputComponent',\r\n  styleUrls: ['./input.css'],\r\n})\r\nexport default class InputComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n  @Input() width?: string = '100px';\r\n  @Input() height?: string = '75px';\r\n  @Input() bgColor?: string;\r\n  @Input() label: string | undefined = 'text';\r\n  @Input() disabled: boolean | undefined = true;\r\n  @Input()\r\n  class?: string;\r\n  @Input() value: any = '';\r\n  @Output()\r\n  @Input() placeHolder?: any = 'text';\r\n  onClick = new EventEmitter<Event>();\r\n\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".input-element{\r\n    border: 1px solid black;\r\n    width: 80px !important;\r\n    border-radius: 4px;\r\n    padding-top: 2px;\r\n    \r\n}",
+                    "styleUrl": "./input.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-a9449cc38479d91ec16d62b15f76b57dd6384efb80e59e093d24bda119a0cee84e1308927e39f2d567fabff4d3a8fe0c96c09a49151ef3f5eafcf310fa461a09",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"'doLogout()'\"\n      (onLogin)=\"'doLogin()'\"\n      (onCreateAccount)=\"'doCreateAccount()'\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 68
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 78,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "HeaderComponent",
+                    "type": "component"
+                },
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport type { User } from './User';\nimport HeaderComponent from './header.component';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'storybook-page',\n  standalone:true,\n  imports:[HeaderComponent,CommonModule],\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"'doLogout()'\"\n      (onLogin)=\"'doLogin()'\"\n      (onCreateAccount)=\"'doCreateAccount()'\"\n    ></storybook-header>\n    <section class=\"storybook-page\">\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-page {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\n.storybook-page h2 {\n  font-weight: 700;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\n.storybook-page p {\n  margin: 1em 0;\n}\n\n.storybook-page a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\n.storybook-page ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\n.storybook-page li {\n  margin-bottom: 8px;\n}\n\n.storybook-page .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\n.storybook-page .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\n.storybook-page .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\n.storybook-page .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "RadioComponent",
+            "id": "component-RadioComponent-1c62ef4f098cf7befa77299697909f08bdde8ff22255b0e0dfe48cda4f83265476fa3b6e70baf8aa7cd30985471d35056100db019aabf42e19a98ade5ebc9fef",
+            "file": "src/stories/radio.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "RadioComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-radio",
+            "styleUrls": [
+                "./radio.css"
+            ],
+            "styles": [],
+            "template": "<mat-radio-button [value]='value'  [disabled]=\"disabled\">{{label}}</mat-radio-button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'radio'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "MatRadioModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input, Output, EventEmitter } from '@angular/core';\r\nimport { MatRadioModule } from '@angular/material/radio';\r\n\r\n@Component({\r\n    selector: 'storybook-radio',\r\n    imports: [CommonModule, MatRadioModule],\r\n    standalone: true,\r\n    template: ` <mat-radio-button [value]='value'  [disabled]=\"disabled\">{{label}}</mat-radio-button>`,\r\n    exportAs: 'RadioComponent',\r\n    styleUrls: ['./radio.css'],\r\n})\r\nexport default class RadioComponent {\r\n    @Input()\r\n    class?: string;\r\n    @Input() disabled:boolean=false;\r\n    @Input() name = '';\r\n    @Input() id = '';\r\n    @Input() value: any = '';\r\n    @Input() label: string = 'radio';\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./radio.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "SidebarComponent",
+            "id": "component-SidebarComponent-d9f64d3d03710f8439c50043165142e686965a934354dd7536fd8ee65e61f5639c2fd1ff4523714c468741f01ad0c22e26a527ac8382131901b42010d8f45750",
+            "file": "src/stories/sidebar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "exportAs": "SidebarComponent",
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-sidebar",
+            "styleUrls": [
+                "./sidebar.css"
+            ],
+            "styles": [],
+            "template": "<div class=\"sidebar-container\">  <span class=\"list-items\" *ngFor=\"let item of list\">{{item}}</span>\n </div>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Sidebar'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "list",
+                    "defaultValue": "['Create form']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "{}",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                },
+                {
+                    "name": "ButtonComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\nimport ButtonComponent from './button.component';\r\n\r\n@Component({\r\n  selector: 'storybook-sidebar',\r\n  imports: [CommonModule,ButtonComponent],\r\n  standalone:true,\r\n  template: ` <div class=\"sidebar-container\">\r\n   <span class=\"list-items\" *ngFor=\"let item of list\">{{item}}</span>\r\n  </div>`,\r\n  exportAs:'SidebarComponent',\r\n  styleUrls: ['./sidebar.css'],\r\n})\r\nexport default class SidebarComponent {\r\n  @Input()\r\n  label = 'Sidebar';\r\n\r\n  @Input()\r\n  list=['Create form']\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".sidebar-container {\r\n    background-color: lavender;\r\n    height: 86vh;\r\n    text-align: center;\r\n}\r\n.list-items{\r\n   font-weight: bold;\r\n   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\r\n}",
+                    "styleUrl": "./sidebar.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": []
+        },
+        {
+            "name": "SidebarComponent",
+            "id": "component-SidebarComponent-a56279cf7d3397391c6fe0e26acb3ee272c18367fc036a1a1f420d5c50a7ab977a1d46739eac231309730b9135148cdfc6eb8ac1cda713d5f23dc42817af8333-1",
+            "file": "src/app/sidebar/sidebar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sidebar",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./sidebar.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-sidebar',\n  standalone: true,\n  imports: [],\n  templateUrl: './sidebar.component.html',\n  styleUrl: './sidebar.component.css'\n})\nexport class SidebarComponent {\n\n}\n",
+            "styleUrl": "./sidebar.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "SidebarComponent-1",
+            "templateData": "<div\n    class=\"relative flex flex-col bg-clip-border bg-cyan-700 text-gray-700 h-[calc(100vh-67px)] w-full max-w-[13rem] p-4 shadow-xl shadow-blue-gray-900/5\">\n    <nav class=\"flex flex-col gap-1 min-w-[240px] p-2 font-sans text-base font-normal text-white\">\n        <div role=\"button\" tabindex=\"0\"\n            class=\"flex items-center w-3/4 p-3 rounded-lg text-start leading-tight transition-all hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-gray-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none\">\n            <div class=\"grid place-items-center mr-4\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"\n                    class=\"h-5 w-5\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M2.25 2.25a.75.75 0 000 1.5H3v10.5a3 3 0 003 3h1.21l-1.172 3.513a.75.75 0 001.424.474l.329-.987h8.418l.33.987a.75.75 0 001.422-.474l-1.17-3.513H18a3 3 0 003-3V3.75h.75a.75.75 0 000-1.5H2.25zm6.04 16.5l.5-1.5h6.42l.5 1.5H8.29zm7.46-12a.75.75 0 00-1.5 0v6a.75.75 0 001.5 0v-6zm-3 2.25a.75.75 0 00-1.5 0v3.75a.75.75 0 001.5 0V9zm-3 2.25a.75.75 0 00-1.5 0v1.5a.75.75 0 001.5 0v-1.5z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </div>\n            Create Form\n        </div>\n        <div role=\"button\" tabindex=\"0\"\n            class=\"flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none\">\n            <div class=\"grid place-items-center mr-4\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"\n                    class=\"h-5 w-5\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M6.912 3a3 3 0 00-2.868 2.118l-2.411 7.838a3 3 0 00-.133.882V18a3 3 0 003 3h15a3 3 0 003-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0017.088 3H6.912zm13.823 9.75l-2.213-7.191A1.5 1.5 0 0017.088 4.5H6.912a1.5 1.5 0 00-1.434 1.059L3.265 12.75H6.11a3 3 0 012.684 1.658l.256.513a1.5 1.5 0 001.342.829h3.218a1.5 1.5 0 001.342-.83l.256-.512a3 3 0 012.684-1.658h2.844z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </div>View templates<div class=\"grid place-items-center ml-auto justify-self-end\">\n            </div>\n        </div>\n        <div role=\"button\" tabindex=\"0\"\n            class=\"flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none\">\n            <div class=\"grid place-items-center mr-4\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"\n                    class=\"h-5 w-5\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </div>Profile\n        </div>\n        <div role=\"button\" tabindex=\"0\"\n            class=\"flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none\">\n            <div class=\"grid place-items-center mr-4\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"\n                    class=\"h-5 w-5\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </div>Settings\n        </div>\n        <div role=\"button\" tabindex=\"0\"\n            class=\"flex items-center w-full p-3 rounded-lg text-start leading-tight transition-all hover:bg-opacity-80 focus:bg-blue-50 focus:bg-opacity-80 active:bg-blue-50 active:bg-opacity-80 hover:text-blue-900 focus:text-blue-900 active:text-blue-900 outline-none\">\n            <div class=\"grid place-items-center mr-4\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"\n                    class=\"h-5 w-5\">\n                    <path fill-rule=\"evenodd\"\n                        d=\"M12 2.25a.75.75 0 01.75.75v9a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM6.166 5.106a.75.75 0 010 1.06 8.25 8.25 0 1011.668 0 .75.75 0 111.06-1.06c3.808 3.807 3.808 9.98 0 13.788-3.807 3.808-9.98 3.808-13.788 0-3.808-3.807-3.808-9.98 0-13.788a.75.75 0 011.06 0z\"\n                        clip-rule=\"evenodd\"></path>\n                </svg>\n            </div>Log Out\n        </div>\n    </nav>\n</div>"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Active",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/dashboard/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [provideRouter(routes), provideClientHydration(), provideAnimations()]\n}"
+            },
+            {
+                "name": "bootstrap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/main.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+            },
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/dashboard/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Hover",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/dashboard/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<>",
+                "defaultValue": "{\r\n  component: CheckboxComponent,\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Header>",
+                "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule,ButtonComponent],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<>",
+                "defaultValue": "{\r\n  component: InputComponent,\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Page>",
+                "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<Button>",
+                "defaultValue": "{\r\n  title: 'Sidebar',\r\n  component: SidebarComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Sidebar',\r\n    backgroundColor:'red'\r\n  },\r\n}"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "serverConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [\n    provideServerRendering()\n  ]\n}"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/dashboard/dashboard.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "any",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<>",
+                "file": "src/stories/checkbox.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Header>",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<>",
+                "file": "src/stories/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Page>",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<Button>",
+                "file": "src/stories/sidebar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/dashboard/dashboard.stories.ts": [
+                {
+                    "name": "Active",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/dashboard/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/dashboard/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Hover",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/dashboard/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/dashboard/dashboard.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n    component: ButtonComponent,\r\n    props: args,\r\n})"
+                }
+            ],
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [provideRouter(routes), provideClientHydration(), provideAnimations()]\n}"
+                }
+            ],
+            "src/main.server.ts": [
+                {
+                    "name": "bootstrap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/main.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "() => bootstrapApplication(AppComponent, config)"
+                }
+            ],
+            "src/app/app.config.server.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+                },
+                {
+                    "name": "serverConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [\n    provideServerRendering()\n  ]\n}"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'large',\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\n  title: 'Example/Button',\n  component: Button,\n  tags: ['autodocs'],\n  render: (args: Button) => ({\n    props: {\n      backgroundColor: null,\n      ...args,\n    },\n  }),\n  argTypes: {\n    backgroundColor: {\n      control: 'color',\n    },\n  },\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    primary: true,\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'Button',\n  },\n}"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    size: 'small',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    user: {\n      name: 'Jane Doe',\n    },\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Header>",
+                    "defaultValue": "{\n  title: 'Example/Header',\n  component: Header,\n  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs\n  tags: ['autodocs'],\n  render: (args) => ({ props: args }),\n  decorators: [\n    moduleMetadata({\n      declarations: [Button],\n      imports: [CommonModule,ButtonComponent],\n    }),\n  ],\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n}"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    const loginButton = canvas.getByRole('button', { name: /Log in/i });\n    await expect(loginButton).toBeInTheDocument();\n    await userEvent.click(loginButton);\n    await expect(loginButton).not.toBeInTheDocument();\n\n    const logoutButton = canvas.getByRole('button', { name: /Log out/i });\n    await expect(logoutButton).toBeInTheDocument();\n  },\n}"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: (args: Page) => ({\n    props: args,\n  }),\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Page>",
+                    "defaultValue": "{\n  title: 'Example/Page',\n  component: Page,\n  parameters: {\n    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout\n    layout: 'fullscreen',\n  },\n  decorators: [\n    moduleMetadata({\n      declarations: [Button, Header],\n      imports: [CommonModule],\n    }),\n  ],\n}"
+                }
+            ],
+            "src/stories/checkbox.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<>",
+                    "defaultValue": "{\r\n  component: CheckboxComponent,\r\n}"
+                }
+            ],
+            "src/stories/input.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<>",
+                    "defaultValue": "{\r\n  component: InputComponent,\r\n}"
+                }
+            ],
+            "src/stories/sidebar.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<Button>",
+                    "defaultValue": "{\r\n  title: 'Sidebar',\r\n  component: SidebarComponent,\r\n  tags: ['autodocs'],\r\n  render: (args: Button) => ({\r\n    props: {\r\n      backgroundColor: null,\r\n      ...args,\r\n    },\r\n  }),\r\n  argTypes: {\r\n    backgroundColor: {\r\n      control: 'color',\r\n    },\r\n  },\r\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    primary: true,\r\n    label: 'Sidebar',\r\n    backgroundColor:'red'\r\n  },\r\n}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/i,\n      },\n    },\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/checkbox.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<>",
+                    "file": "src/stories/checkbox.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Header>",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<>",
+                    "file": "src/stories/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Page>",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/sidebar.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<Button>",
+                    "file": "src/stories/sidebar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 1,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DashboardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Active",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Hover",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/dashboard.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/element-list/element-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ElementListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/27",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/sidebar/sidebar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/main.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "bootstrap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 62,
+                "coverageCount": "5/8",
+                "status": "good"
+            },
+            {
+                "filePath": "src/stories/checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckboxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/checkbox.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/date.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DateComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropdownComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 9,
+                "coverageCount": "1/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/radio.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RadioComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/sidebar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SidebarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/sidebar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/sidebar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

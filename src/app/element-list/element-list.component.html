@@ -1,0 +1,81 @@
+<div [ngClass]="!preview ? 'form-layout' : 'preview-form-layout'">
+    <div class="example-container">
+        <div *ngIf="contentBlock.length > 0" class="flex flex-row justify-end gap-2">
+            <storybook-button *ngIf="!preview" (onClick)="onClear()" label="CLEAR"></storybook-button>
+            <storybook-button *ngIf="!preview" (onClick)="removeItem()" label="UNDO"></storybook-button>
+            <storybook-button *ngIf="preview" (onClick)="closePreview()"label="CLOSE"></storybook-button>
+        </div>
+        <div id="contentBlock" cdkDropList [cdkDropListData]="contentBlock" cdkDropListConnectedTo="elements"
+            class="example-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="predicate">
+            @for (item of contentBlock; track item) {
+            <p-dialog [(visible)]="visible"
+                [style]="{width: '50vw',height:'40vw',border:'1px solid black',backgroundColor:'lightGray',borderRadius:'4px',textAlign:'start',overflow:'auto'}">
+                <p class="text-xl">Properties</p>
+                <br />
+                <span class="p-float-label flex flex-col ml-5">
+                    <label htmlFor="label">Label</label>
+                    <input class="w-2/4 rounded-md h-9" pInputText id="username" (change)='saveLabel($event)' />
+                </span>
+                <br />
+                <span *ngIf="item.name==='text'|| item.name==='dropdown' || item.name==='textArea'" class="p-float-label flex flex-col ml-5">
+                    <label htmlFor="width">Width</label>
+                    <input class="w-2/4 rounded-md h-9" pInputText id="username" (change)='changeWidth($event)' />
+                </span>
+                <br />
+                <span *ngIf="item.name==='text'|| item.name==='dropdown'" class="p-float-label flex flex-col ml-5">
+                    <label htmlFor="placeholder">placeholder</label>
+                    <input class="w-2/4 rounded-md h-9" pInputText id="username" (ngModel)="value" />
+                </span>
+                <br />
+                <span *ngIf="item.name==='text'" class="p-float-label flex flex-col ml-5">
+                    <label htmlFor="maxLength">Max length</label>
+                    <input class="w-2/4 rounded-md h-9" pInputText id="username" (ngModel)="value" />
+                </span>
+                <br />
+                <span class="p-float-label flex flex-row gap-2 ml-5">
+                    <label htmlFor="maxLength">Disabled</label>
+                    <mat-slide-toggle (change)="onSlideToggleChange($event.checked)"></mat-slide-toggle>
+                </span>
+                <br />
+                <span *ngIf="item.name==='checkbox'" class="p-float-label flex flex-row gap-2 ml-5">
+                    <label htmlFor="checked">Checked</label>
+                    <mat-slide-toggle (change)="onSlideCheckedChange($event.checked)"></mat-slide-toggle>
+                </span>
+                <br />
+                <span *ngIf="item.name==='dropdown'" class="p-float-label flex flex-col ml-5">
+                    <label htmlFor="options">Options</label>
+                    <div class="card p-fluid w-2/4 rounded-md bg-white">
+                        <p-chips class="bg-slate-400" (ngModel)="values" (onAdd)="onAddOptions($event)"></p-chips>
+                    </div>
+                </span>
+            </p-dialog>
+            <div (dblclick)="showDialog($event)" class="grid grid-rows h-20">
+                <div class="grid-cols" cdkDrag [cdkDragData]="item">
+                    <storybook-input *ngIf="item.name==='text'" [width]="itemWidth" [label]="inputLabel"
+                        [disabled]="isDisabled"></storybook-input>
+                    <storybook-button *ngIf="item.name==='Button'" [label]="buttonLabel"
+                        [disabled]="isDisabled"></storybook-button>
+                    <storybook-checkbox *ngIf="item.name==='checkbox'" [label]="checkboxLabel" [checked]="isChecked"
+                        [disabled]="isDisabled"></storybook-checkbox>
+                    <storybook-dropdown *ngIf="item.name==='dropdown'" [width]="itemWidth" [data]="optionsList"
+                        [disabled]="optionsList.length > 0 && !isDisabled ? false : true"></storybook-dropdown>
+                    <storybook-radio *ngIf="item.name==='radio'" [label]="radioLabel"
+                        [disabled]="isDisabled"></storybook-radio>
+                    <storybook-textArea *ngIf="item.name==='textArea'" [width]="itemWidth || '300px'" height="100px" [label]="inputLabel"
+                        [disabled]="isDisabled"></storybook-textArea>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+    <div *ngIf="!preview" class="example-container">
+        <div id="elements" cdkDropList [cdkDropListData]="elements" cdkDropListConnectedTo="contentBlock"
+            class="fetch-list" (cdkDropListDropped)="drop($event)" [cdkDropListEnterPredicate]="predicate">
+            @for (element of elements; track element) {
+            <div class="pt-2 border-black h-16 border-bottom hover:bg-slate-300 cursor-move " cdkDrag
+                [cdkDragData]="element"><span class="cursor-move" [ngComponentOutlet]="element.component"></span></div>
+            }
+        </div>
+    </div>
+
+</div>
